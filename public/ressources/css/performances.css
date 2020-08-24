@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Aladin', cursive;
+}
+nav {
+  position: fixed;
+  background: linear-gradient(to left, #d92b04, #a62103);
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+nav img {
+  margin-top: 10px;
+  height: 70px;
+}
+.logo {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 1px;
+  font-size: 1.2em;
+}
+nav .nav-link {
+  display: inline-flex;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px;
+}
+a:hover {
+  text-decoration: underline #ffffff;
+}
+.bg-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../images/bg_image_prestation.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 620px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 5em;
+  color: #ffffff;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  margin-top: -150px;
+  font-size: 2.5em;
+}
+.title-cs {
+  margin-top: 160px;
+}
+.title-mt {
+  margin-top: 190px;
+}
+.title-a {
+  margin-top: 190px;
+}
+.title-rp {
+  margin-top: 190px;
+}
+.performances img {
+  height: 200px;
+  width: 45%;
+  margin-top: 50px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.performances p {
+  width: 45%;
+  text-align: justify;
+  margin-top: 30px;
+  font-size: 1.2em;
+}
+.description {
+  display: flex;
+  justify-content: center;
+}
+.performances li {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+}
+.performances ul {
+  margin-top: 60px;
+}
+footer {
+  height: 100px;
+  margin-top: 50px;
+  background-color: #64717e;
+}
+@media all and (max-width: 976px){
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  .logo{
+    display: none;
+  }
+  ul,
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  nav li{
+    margin-top: 15px;
+  }
+  .bg-image {
+    width: 100%;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 3em;
+  }
+  h2{
+    text-align:center;
+    padding-top: 90px;
+  }
+  .performances img{
+    width: 90%;
+  }
+  .performances p{
+    width: 80%;
+  }
+}
