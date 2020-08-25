@@ -59,6 +59,8 @@
             </tr>
         <?php endfor; ?>
     </table>
+    <footer>
+    </footer>
 </body>
 
 </html>

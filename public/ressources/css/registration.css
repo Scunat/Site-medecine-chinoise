@@ -91,7 +91,7 @@ input[type="submit"]:hover {
 footer {
   height: 100px;
   margin-top: 90px;
-  background-color: #64717e;
+  background-color: #bfc4c8;
 }
 @media all and (max-width: 976px) {
   nav {
