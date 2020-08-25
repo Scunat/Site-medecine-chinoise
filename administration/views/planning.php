@@ -17,7 +17,7 @@
                 <li class="logo"><a href="../../administration/controllers/index.php"><img src="../../public/ressources/images/logo.jpg" alt=""></a></li>
                 <div class="nav-link">
                     <li><a href="../../administration/controllers/account.php">Mon espace</a></li>
-                    <li><a href="index.php">Deconnexion</a></li>
+                    <li><a href="../../administration/controllers/deconnexion.php">Deconnexion</a></li>
                 </div>
             </ul>
         </nav>

@@ -61,18 +61,21 @@ input{
   border: solid 2px #d92b04;
   border-radius: 7px;
   margin-top: 10px;
+  font-size: 1em;
+  font-family: serif;
 }
-input[type=submit]
+button
 {
   width: 150px;
   margin-top: 20px; 
   border-radius: 5px;
+  border: none;
   background-color: #d92b04;
   color: #ffffff;
   height: 50px;
   font-size: 1.3em;
 }
-input[type=submit]:hover{
+button:hover{
  text-decoration: underline #ffffff;
  cursor: pointer;
 }
@@ -84,7 +87,7 @@ input[type=submit]:hover{
   text-decoration: underline #4d78db;
 }
 footer{
-  height: 100px;
+  height: 50px;
   margin-top: 50px;
   background-color: #bfc4c8;
 }
@@ -117,7 +120,7 @@ footer{
   .form{
     margin-top: -30px;
   }
-  input{
+  button{
    width: 250px;
   }
   .connexion{
