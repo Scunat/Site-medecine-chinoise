@@ -10,6 +10,7 @@ $dbh = new PDO(
 );
 //var_dump($dbh);
 
+
 if (!empty($_POST)) {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
@@ -21,7 +22,7 @@ if (!empty($_POST)) {
     $sth->execute();
     $authentication = $sth->fetch();
     if ($authentication !== false AND password_verify($password, $authentication['password'])) {
-        $_SESSION['authentification'] = intval(($authentication['id']));
+        $_SESSION['authentication'] = intval(($authentication['id']));
         header('Location:account.php');
         exit;
     } else {

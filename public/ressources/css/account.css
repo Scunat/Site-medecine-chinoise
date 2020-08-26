@@ -40,6 +40,10 @@ footer {
   margin-top: 50px;
   background-color: #bfc4c8;
 }
+.ml{
+  display: flex;
+  align-items: center;
+}
 @media all and (max-width: 976px){
   nav {
     position: absolute;
