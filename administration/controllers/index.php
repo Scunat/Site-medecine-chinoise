@@ -31,4 +31,4 @@ if (!empty($_POST)) {
     }
 }
 
-require '../../administration/views/index.phtml';
+require '../../administration/views/index.php';

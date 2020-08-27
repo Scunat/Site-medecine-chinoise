@@ -1,0 +1,15 @@
+{
+    "name": "sarita/projetstage",
+    "authors": [
+        {
+            "name": "Sarita Cunat",
+            "email": "cunat.sarita@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "controllers\\":"administration/controllers"
+        }
+    },
+    "require": {}
+}

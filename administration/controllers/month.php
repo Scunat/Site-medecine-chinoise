@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers;
+namespace controllers;
 
 class Month
 {

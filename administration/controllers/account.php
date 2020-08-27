@@ -1,3 +1,3 @@
 <?php
 
-require '../views/account.phtml';
+require '../views/account.php';
