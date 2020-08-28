@@ -16,7 +16,7 @@ class Appointments
      * @param \DateTime $end
      * return array
      */
-    public function getEventsBetween(\DateTime $start, \DateTime $end): array
+    public function getAppointmentsBetween(\DateTime $start, \DateTime $end): array
     {
         $sql = "SELECT * 
                 FROM appointments
@@ -31,9 +31,9 @@ class Appointments
      * @param \DateTime $end
      * return array
      */
-    public function getEventsBetweenByDay(\DateTime $start, \DateTime $end): array
+    public function getAppointmentsBetweenByDay(\DateTime $start, \DateTime $end): array
     {
-        $appointments = $this->getEventsBetween($start, $end);
+        $appointments = $this->getAppointmentsBetween($start, $end);
         $days = [];
         foreach ($appointments as $appointment) {
             $date = explode('', $appointment['start'])[0];
@@ -61,5 +61,14 @@ class Appointments
             throw new \Exception('Aucun résultat n\'a été trouvé');
         }
         return $result;
+    }
+    public function create(Appointment $event): bool{
+        $statement = $this->pdo->prepare('INSERT INTO appointments (name, description, start, end) Values(?, ?, ?, ?)');
+        return $statement->execute([
+            $event->getTitle(),
+            $event->getDescription(),
+            $event->getStart()->format('Y-m-d H:i:s'),
+            $event->getEnd()->format('Y-m-d H:i:s'),
+        ]);
     }
 }

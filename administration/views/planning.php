@@ -8,7 +8,7 @@ $start = $month->getFirstDay();
 $firstDay = $start->format('N') === '1' ? $start :  $month->getFirstDay()->modify('last monday');
 $weeks = $month->getWeeks();
 $end = (clone $start)->modify('+' . (6 + 7 * ($weeks - 1)) . 'days');
-$appointments = $appointments->getEventsBetweenByDay($start, $end);
+$appointments = $appointments->getAppointmentsBetweenByDay($start, $end);
 //var_dump($appointments);
 require '../views/header.php';
 ?>
@@ -44,7 +44,7 @@ require '../views/header.php';
             </tr>
         <?php endfor; ?>
     </table>
-    <a href="\add.php" class="planning_button">+</a>
+    <a href="../../administration/controllers/add.php" class="planning_button">+</a>
 </section>
 
 <?php require '../views/footer.php'; ?>

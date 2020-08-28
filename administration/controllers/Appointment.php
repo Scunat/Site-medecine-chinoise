@@ -33,4 +33,16 @@ class Appointment{
     public function getEnd(): \DateTime{
         return new \DateTime($this->end);
     }
+    public function setTitle(string $title){
+        $this->title = $title;
+    }
+    public function setDescription(string $description){
+        $this->description = $description;
+    }
+    public function setStart(string $start){
+        $this->start = $start;
+    }
+    public function setEnd(string $end){
+        $this->end = $end;
+    }
 }

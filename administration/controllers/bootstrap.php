@@ -40,5 +40,5 @@ function h(?string $value): string
 
 function render(string $view, $parameters = []){
     extract($parameters);
-    include '../views/{$view}.php';
+    include '../views/header.php';
 }
