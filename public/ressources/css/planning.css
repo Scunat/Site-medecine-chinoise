@@ -32,6 +32,10 @@ a {
   text-decoration: none;
   padding: 15px;
 }
+.link-black{
+  color: #000;
+  font-size: 1.3em;
+}
 a:hover {
   text-decoration: underline #ffffff;
 }
@@ -73,6 +77,11 @@ h2 {
 }
 .planning_othermonth .plannig_day{
  opacity: 0.4;
+}
+.planning_appointment{
+  text-align: center;
+  margin-top: 15px;
+  color: #000;
 }
 .planning_button{
   display: block;

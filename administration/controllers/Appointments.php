@@ -2,6 +2,7 @@
 
 namespace controllers;
 
+
 class Appointments
 {
     private $pdo;
@@ -26,7 +27,7 @@ class Appointments
         return $results;
     }
     /**
-     * Récupère les rendez-vous commençant entre 2 dates indexé par jour
+     * Récupère les rendez-vous commençant entre 2 dates indexées par jour
      * @param \DateTime $start
      * @param \DateTime $end
      * return array
@@ -36,7 +37,7 @@ class Appointments
         $appointments = $this->getAppointmentsBetween($start, $end);
         $days = [];
         foreach ($appointments as $appointment) {
-            $date = explode('', $appointment['start'])[0];
+            $date = explode(' ', $appointment['start'])[0];
             if (!isset($days[$date])) {
                 $days[$date] = [$appointment];
             } else {
@@ -53,7 +54,6 @@ class Appointments
      */
     public function find(int $id): Appointment
     {
-        require './Appointment.php';
         $statement = $this->pdo->query("SELECT * From appointments WHERE id = $id LIMIT 1");
         $statement ->setFetchMode(\PDO::FETCH_CLASS, Appointment::class);
         $result = $statement->fetch();
@@ -63,7 +63,7 @@ class Appointments
         return $result;
     }
     public function create(Appointment $event): bool{
-        $statement = $this->pdo->prepare('INSERT INTO appointments (name, description, start, end) Values(?, ?, ?, ?)');
+        $statement = $this->pdo->prepare('INSERT INTO appointments (title, description, start, end) Values(?, ?, ?, ?)');
         return $statement->execute([
             $event->getTitle(),
             $event->getDescription(),

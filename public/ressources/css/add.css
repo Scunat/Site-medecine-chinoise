@@ -60,6 +60,7 @@ input {
   margin-top: 10px;
   font-size: 1em;
   padding: 3px;
+  font-family: serif;
 }
 textarea {
   height: 100px;

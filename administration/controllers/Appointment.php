@@ -6,7 +6,7 @@ class Appointment{
 
     private $id;
 
-    private $name;
+    private $title;
 
     private $description;
 
@@ -18,11 +18,11 @@ class Appointment{
         return $this->id;
     }
     
-    public function getName(): string{
-        return $this->name;
+    public function getTitle(): string{
+        return $this->title;
     }
 
-    public function getDescription(): int{
+    public function getDescription(): string{
         return $this->description ?? '';
     }
 

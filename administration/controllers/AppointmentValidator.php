@@ -1,7 +1,8 @@
 <?php
+
 namespace controllers;
 
-use App\Validator;
+use app\Validator;
 
 class AppointmentValidator extends Validator{
     /**

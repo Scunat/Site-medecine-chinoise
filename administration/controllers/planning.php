@@ -1,6 +1,5 @@
 <?php
-require '../controllers/bootstrap.php';
-
+require './bootstrap.php';
 $pdo = get_pdo();
 $appointments = new controllers\Appointments($pdo);
 $month = new controllers\Month($_GET['month'] ?? null, $_GET['year'] ?? null);
@@ -36,7 +35,7 @@ require '../views/header.php';
                         <div class="plannig_day"><?= $date->format('d'); ?></div>
                         <?php foreach ($appointmentsForDay as $appointment) : ?>
                             <div class="planning_appointment">
-                                <?= (new DateTime($appointment['start']))->format('H:i') ?> - <a href="/administration/controllers/appointments.php?id=<?= $appointment['id']; ?>"><?= $appointment['name']; ?></a>
+                                <?= (new DateTime($appointment['start']))->format('H:i') ?> - <a class='link-black' href="../views/appointment.php?id=<?= $appointment['id']; ?>"><?= $appointment['title']; ?></a>
                             </div>
                         <?php endforeach; ?>
                     </td>

@@ -19,13 +19,13 @@ function dd(...$vars)
 
 function get_pdo(): PDO
 {
-    return new \PDO(
+    return new PDO(
         'mysql:host=localhost;dbname=xiaoyu;charset=utf8',
         'root',
         '',
         [
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
-            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]
     );
 }
@@ -40,5 +40,5 @@ function h(?string $value): string
 
 function render(string $view, $parameters = []){
     extract($parameters);
-    include '../views/header.php';
+    include "../views/{$view}.php";
 }

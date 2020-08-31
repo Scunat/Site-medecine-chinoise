@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1eea0c00ae.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/ressources/css/add.css">
     <title>Médecine traditionelle chinoise-XIAO YU-ajouterUnRendez-vous</title>
 </head>
@@ -14,7 +16,7 @@
             <ul>
                 <li class="logo"><a href="index.php"><img src="../../public/ressources/images/logo.jpg" alt=""></a></li>
                 <div class="nav-link">
-                    <li><a href="../../administration/views/planning.php">Mon planning</a></li>
+                    <li><a href="../controllers/planning.php">Mon planning</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
                 </div>
             </ul>
@@ -47,7 +49,7 @@
             <?php endif; ?>
             <label for="end">Fin</label>
             <input id="end" type="time" name="end" placeholder="HH:MM" value="<?= isset($data['end']) ? h($data['end']) : ''; ?>" class="time">
-            <label for="description">Decription</label>
+            <label for="description">Description</label>
             <textarea id="description" name="description" placeholder="..." <?= isset($data['description']) ? h($data['description']) : ''; ?>></textarea>
             <button>Valider</button>
         </form>
