@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/1eea0c00ae.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/ressources/css/planning.css">
+    <link rel="stylesheet" href="../../public/ressources/css/detailsAppointment.css">
     <title><?= isset($title) ? h($title) : 'Médecine traditionelle chinoise-XIAO YU-monPlanning'; ?></title>
 </head>
 

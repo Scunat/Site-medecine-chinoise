@@ -15,8 +15,8 @@ try {
 render('header', ['title' => $appointment->getTitle()]);
 ?>
 
-<h1><?= h($appointment->getTitle()); ?></h1>
-<ul>
+<h1 class="titleAppointment"><?= h($appointment->getTitle()); ?></h1>
+<ul class="detailsAppointment">
     <li>Date: <?= $appointment->getStart()->format('d/m/y'); ?></li>
     <li>Heure de démarrage: <?= $appointment->getStart()->format('H:i'); ?></li>
     <li>Heure de fin: <?= $appointment->getEnd()->format('H:i'); ?></li>
