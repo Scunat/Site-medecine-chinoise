@@ -28,24 +28,24 @@
     <section class="form">
         <?php if (!empty($errors)) : ?>
             <div class="alert">
-                Merci de corriger les erreurs
+                Merci de corriger les erreurs !
             </div>
         <?php endif; ?>
-        <form action="" method="post">
-            <label for="title">Titre</label>
+        <form action="./add.php" method="post">
+            <label for="title" class="labeltitle">Titre</label>
             <input id="title" type="text" class="title" name="title" value="<?= isset($data['title']) ? h($data['title']) : ''; ?>">
             <?php if (isset($errors['title'])) : ?>
-                <?= $errors['title']; ?>
+                <p class="errors"><?= $errors['title']; ?></p>
             <?php endif; ?>
             <label for="date">Date</label>
-            <input id="date" type="date" class="title" value="<?= isset($data['date']) ? h($data['date']) : ''; ?>">
+            <input id="date" type="date" name="date" value="<?= isset($data['date']) ? h($data['date']) : ''; ?>">
             <?php if (isset($errors['date'])) : ?>
-                <?= $errors['date']; ?>
+                <p class="errors"><?= $errors['date']; ?></p>
             <?php endif; ?>
             <label for="start">Démarrage</label>
             <input id="start" type="time" name="start" placeholder="HH:MM" value="<?= isset($data['start']) ? h($data['start']) : ''; ?>" class="time">
             <?php if (isset($errors['start'])) : ?>
-                <?= $errors['start']; ?>
+                <p class="errors"><?= $errors['start']; ?></p>
             <?php endif; ?>
             <label for="end">Fin</label>
             <input id="end" type="time" name="end" placeholder="HH:MM" value="<?= isset($data['end']) ? h($data['end']) : ''; ?>" class="time">

@@ -67,7 +67,7 @@ h2 {
   border: 1px solid #ccc;
   border-collapse: collapse;
   vertical-align: top;
-  width: 110px;
+  width: 210px;
   height: 100px;
 }
 .planning_weekday{
@@ -81,10 +81,16 @@ h2 {
 .planning_appointment{
   text-align: center;
   margin-top: 15px;
+  font-size: 1em;
   color: #000;
 }
-.planning_button{
-  display: block;
+.link-black:hover{
+  text-decoration: underline;
+  color: rgb(88, 87, 87);
+}
+.add_button {
+  display: flex;
+  justify-content: flex-end;
   width: 15px;
   height: 15px;
   line-height: 15px;
@@ -96,7 +102,7 @@ h2 {
   text-decoration: none;
   transition: transfrom 0.3s;
 }
-.planning_button:hover{
+.add_button:hover{
   text-decoration: none;
   color: #fff;
   transform: scale(1.2);

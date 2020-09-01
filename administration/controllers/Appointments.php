@@ -54,7 +54,8 @@ class Appointments
      */
     public function find(int $id): Appointment
     {
-        $statement = $this->pdo->query("SELECT * From appointments WHERE id = $id LIMIT 1");
+        require '../controllers/Appointment.php';
+        $statement = $this->pdo->query("SELECT * FROM appointments WHERE id = $id LIMIT 1");
         $statement ->setFetchMode(\PDO::FETCH_CLASS, Appointment::class);
         $result = $statement->fetch();
         if($result === false){
@@ -62,13 +63,13 @@ class Appointments
         }
         return $result;
     }
-    public function create(Appointment $event): bool{
-        $statement = $this->pdo->prepare('INSERT INTO appointments (title, description, start, end) Values(?, ?, ?, ?)');
+    public function create(Appointment $appointment): bool{
+        $statement = $this->pdo->prepare('INSERT INTO appointments (title, description, start, end) VALUES (?, ?, ?, ?)');
         return $statement->execute([
-            $event->getTitle(),
-            $event->getDescription(),
-            $event->getStart()->format('Y-m-d H:i:s'),
-            $event->getEnd()->format('Y-m-d H:i:s'),
+            $appointment->getTitle(),
+            $appointment->getDescription(),
+            $appointment->getStart()->format('Y-m-d H:i:s'),
+            $appointment->getEnd()->format('Y-m-d H:i:s'),
         ]);
     }
 }

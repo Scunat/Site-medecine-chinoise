@@ -17,7 +17,7 @@
                 <li class="logo"><a href="../../administration/controllers/index.php"><img src="../../public/ressources/images/logo.jpg" alt=""></a></li>
                 <div class="nav-link">
                     <li><a href="../controllers/planning.php">Mon planning</a></li>
-                    <li><a href="deconnexion.php">Deconnexion</a></li>
+                    <li><a href="deconnexion.php">Déconnexion</a></li>
                 </div>
             </ul>
         </nav>

@@ -11,6 +11,9 @@ $appointments = $appointments->getAppointmentsBetweenByDay($start, $end);
 //var_dump($appointments);
 require '../views/header.php';
 ?>
+<section class="title">
+    <h1>Mon planning</h1>
+</section>
 <section class="h2">
     <h2>
         <?= $month->toString(); ?>
@@ -19,6 +22,9 @@ require '../views/header.php';
 <section class="button">
     <a href="./planning.php?month=<?= $month->previousMonth()->month; ?>&year=<?= $month->previousMonth()->year; ?>" class="button_left">&lt;</a>
     <a href="./planning.php?month=<?= $month->nextMonth()->month; ?>&year=<?= $month->nextMonth()->year; ?>" class="button_right">&gt;</a>
+</section>
+<section>
+    <a href="../../administration/controllers/add.php" class="add_button">+</a>
 </section>
 <section class="planning">
     <table class="planning_table planning_table--<?= $weeks; ?>weeks">
@@ -43,7 +49,6 @@ require '../views/header.php';
             </tr>
         <?php endfor; ?>
     </table>
-    <a href="../../administration/controllers/add.php" class="planning_button">+</a>
 </section>
 
 <?php require '../views/footer.php'; ?>

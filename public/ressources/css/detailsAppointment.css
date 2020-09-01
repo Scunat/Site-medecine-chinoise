@@ -1,7 +1,13 @@
+.titleh1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  font-size: 3em;
+}
 .titleAppointment {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 67px;
 }
 .detailsAppointment li {
   display: flex;

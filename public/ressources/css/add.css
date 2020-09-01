@@ -50,14 +50,17 @@ form {
 }
 label {
   font-size: 1.4em;
-  margin-top: 35px;
+  margin-top: 50px;
+}
+.labeltitle {
+  margin-top: 5px;
 }
 input {
   width: 400px;
   height: 25px;
   border: solid 2px #d92b04;
   border-radius: 7px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 1em;
   padding: 3px;
   font-family: serif;
@@ -72,10 +75,9 @@ textarea {
   font-family: serif;
   padding: 5px;
 }
-button
-{
+button {
   width: 150px;
-  margin-top: 20px; 
+  margin-top: 20px;
   border-radius: 5px;
   border: none;
   background-color: #d92b04;
@@ -83,9 +85,21 @@ button
   height: 40px;
   font-size: 1.1em;
 }
-button:hover{
- text-decoration: underline #ffffff;
- cursor: pointer;
+button:hover {
+  text-decoration: underline #ffffff;
+  cursor: pointer;
+}
+.alert {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: #f11212;
+  padding: 12px;
+  font-size: 1.4em;
+}
+.errors {
+  color: #f11212;
+  margin-top: 15px;
 }
 footer {
   height: 50px;
