@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   margin-top: 67px;
+  text-decoration: underline;
+  color: #d92b04;
 }
 .detailsAppointment li {
   display: flex;

@@ -60,7 +60,7 @@ h2 {
   display: flex;
   justify-content: center;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .planning_table td {
   padding: 10px;
@@ -79,18 +79,19 @@ h2 {
  opacity: 0.4;
 }
 .planning_appointment{
-  text-align: center;
   margin-top: 15px;
   font-size: 1em;
-  color: #000;
+  color: #d92b04;
+}
+.link-black{
+  color: #d92b04;
 }
 .link-black:hover{
   text-decoration: underline;
-  color: rgb(88, 87, 87);
+  color: #a62103;
 }
 .add_button {
   display: flex;
-  justify-content: flex-end;
   width: 15px;
   height: 15px;
   line-height: 15px;
@@ -102,6 +103,11 @@ h2 {
   text-decoration: none;
   transition: transfrom 0.3s;
 }
+.section_add_button{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3%;
+}
 .add_button:hover{
   text-decoration: none;
   color: #fff;
@@ -111,7 +117,7 @@ h2 {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .button_left{
   padding: 3px;

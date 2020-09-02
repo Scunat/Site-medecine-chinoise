@@ -23,7 +23,7 @@ require '../views/header.php';
     <a href="./planning.php?month=<?= $month->previousMonth()->month; ?>&year=<?= $month->previousMonth()->year; ?>" class="button_left">&lt;</a>
     <a href="./planning.php?month=<?= $month->nextMonth()->month; ?>&year=<?= $month->nextMonth()->year; ?>" class="button_right">&gt;</a>
 </section>
-<section>
+<section class="section_add_button">
     <a href="../../administration/controllers/add.php" class="add_button">+</a>
 </section>
 <section class="planning">
